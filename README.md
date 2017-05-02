@@ -1,3 +1,7 @@
+# Newer version
+Idea of `redux-saga-actions` has been reworked and published as [`redux-saga-routines`](https://github.com/afitiskin/redux-saga-routines). Before using this package, please take a look at new one!
+
+
 # redux-saga-actions
 An action creator for [Redux Saga](https://github.com/yelouafi/redux-saga) compatible with [Redux Form](https://github.com/erikras/redux-form). Forked from [redux-form-saga](https://github.com/mhssmnn/redux-form-saga)
 
@@ -11,7 +15,7 @@ Reduce boilerplate from your source code when making requests to API or validati
 npm install --save redux-saga-actions
 ```
 
-**Important!** `redux-saga-actions` uses native *ES2015 Promises*, if the browser you are targeting doesn't support ES2015 Promises, you habe provide a valid polyfill, such as [the one provided by `babel`](https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.9.1/polyfill.js).
+**Important!** `redux-saga-actions` uses native *ES2015 Promises*, if the browser you are targeting doesn't support ES2015 Promises, you have provide a valid polyfill, such as [the one provided by `babel`](https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.9.1/polyfill.js).
 
 ## Usage
 First of all to enable `redux-saga-actions`, you have to add `actionsWatcherSaga` in your `sagaMiddleware.run()`, for example like this:
@@ -82,7 +86,7 @@ This package is 100% compatible with `redux-form-saga@0.0.7`, so feel free to us
 import { PROMISE, createFormAction, formActionSaga } from 'redux-saga-actions';
 
 // or new if you want:
-import { PROMISE_ACTION, createAction, actionWatcherSaga } from 'redux-saga-actions';
+import { PROMISE_ACTION, createAction, actionsWatcherSaga } from 'redux-saga-actions';
 ```
 
 ## Scripts
@@ -94,4 +98,3 @@ $ npm run test
 ## License
 
 MIT
-
