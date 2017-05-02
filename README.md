@@ -12,7 +12,7 @@ Reduce boilerplate from your source code when making requests to API or validati
 ## Installation
 
 ```javascript
-npm install --save redux-saga-actions
+yarn add redux-saga-actions
 ```
 
 **Important!** `redux-saga-actions` uses native *ES2015 Promises*, if the browser you are targeting doesn't support ES2015 Promises, you have provide a valid polyfill, such as [the one provided by `babel`](https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.9.1/polyfill.js).

@@ -1,8 +1,7 @@
 import 'babel-polyfill';
 import { PROMISE_ACTION, createAction, actionsWatcherSaga, handleActionSaga } from '../src';
 import { PROMISE, createFormAction, formActionSaga, handlePromiseSaga } from '../src';
-import { takeEvery } from 'redux-saga';
-import { take, race, put, call } from 'redux-saga/effects';
+import { takeEvery, take, race, put, call } from 'redux-saga/effects';
 import { describe, beforeEach, it } from 'mocha';
 import { expect } from 'chai';
 import { isFSA } from 'flux-standard-action';
@@ -104,7 +103,7 @@ describe('redux-saga-actions', () => {
       const iterator = actionsWatcherSaga();
 
       expect(iterator.next().value).to.deep.equal(
-        call(takeEvery, PROMISE_ACTION, handleActionSaga)
+        takeEvery(PROMISE_ACTION, handleActionSaga)
       );
       expect(iterator.next().done).to.equal(true);
     });
