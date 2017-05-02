@@ -1,5 +1,4 @@
-import { takeEvery } from 'redux-saga';
-import { take, race, put, call } from 'redux-saga/effects';
+import { take, race, put, call, takeEvery } from 'redux-saga/effects';
 
 export const PROMISE_ACTION = '@@redux-saga-actions/PROMISE';
 
@@ -77,7 +76,7 @@ export function* handleActionSaga({ payload }) {
 }
 
 export function* actionsWatcherSaga() {
-  yield call(takeEvery, PROMISE_ACTION, handleActionSaga);
+  yield takeEvery(PROMISE_ACTION, handleActionSaga);
 }
 
 export default actionsWatcherSaga;
